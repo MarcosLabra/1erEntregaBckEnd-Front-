@@ -1,0 +1,27 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 10vh;
+  background-color: #252525;
+  h1 {
+    margin: 2rem;
+    font-family: "dolceVita";
+    font-size: 3rem;
+    color: antiquewhite;
+  }
+  nav {
+    margin: 0 2rem;
+    a {
+        font-family: 'Roboto', sans-serif;
+      font-size: 2rem;
+      text-decoration: none;
+      color: white;
+      margin: 0rem 1rem;
+        &:hover {
+            color: aquamarine;
+            }
+    }
+  }
+}
