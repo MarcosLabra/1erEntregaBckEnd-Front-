@@ -1,5 +1,10 @@
 
 const Item = ({ item }) => {
+
+  const handleDelete = () => {
+    fetch(`https://primer-entrega-bckend.herokuapp.com/api/productos/${item.id}`, {method: 'DELETE'})
+  };
+  
   return (
     <article key={item.id} className="productCard">
       <img src={item.foto} alt={`foto de ${item.nombre}`} />
@@ -9,7 +14,7 @@ const Item = ({ item }) => {
       <p>descripcion: {item.descripcion}</p>
       <p>codigo: {item.codigo}</p>
       <button>Actualizar</button>
-      <button>Eliminar</button>
+      <button onClick={handleDelete}>Eliminar</button>
 
     </article>
   )

@@ -13,7 +13,7 @@ const ItemListContainer = () => {
 
   useEffect(() => {
 
-    fetch('https://primer-entrega-bckend.herokuapp.com/api/productos')
+    fetch('https://primer-entrega-bckend.herokuapp.com/api/productos', {method: 'GET'})
       .then(response => response.json())
       .then(data => setItems(data))
       .catch(error => toast.error("Error al cargar productos"))
